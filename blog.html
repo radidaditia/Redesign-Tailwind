@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekomendasi Film Terbaru</title>
+    <meta name="author" content="Your Name">
+    <meta name="description" content="Website rekomendasi film terbaru">
+
+    <!-- TailwindCSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+
+    <!-- AlpineJS for interactivity -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-400">FilmRekomendasi</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-blue-400">Home</a>
+                <a href="#" class="hover:text-blue-400">Genres</a>
+                <a href="#" class="hover:text-blue-400">Reviews</a>
+                <a href="#" class="hover:text-blue-400">Contact</a>
+            </div>
+            <button class="md:hidden text-white focus:outline-none" @click="open = !open">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div x-show="open" class="md:hidden bg-gray-800 p-4">
+            <a href="#" class="block py-2 hover:text-blue-400">Home</a>
+            <a href="#" class="block py-2 hover:text-blue-400">Genres</a>
+            <a href="#" class="block py-2 hover:text-blue-400">Reviews</a>
+            <a href="#" class="block py-2 hover:text-blue-400">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gray-800 h-96">
+        <div class="absolute inset-0 flex items-center justify-center text-center text-white">
+            <div>
+                <h1 class="text-5xl font-bold mb-4">Temukan Film Terbaru</h1>
+                <p class="text-lg mb-8">Dapatkan rekomendasi film terbaru yang layak untuk ditonton.</p>
+                <a href="#recommendations" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500">Lihat
+                    Rekomendasi</a>
+                <a href="#Artikel Terbaru" class=" bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500">Article
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Film Recommendations Section -->
+    <section id="recommendations" class="container mx-auto py-12">
+        <h2 class="text-3xl font-bold text-center mb-8">Rekomendasi Film Terbaru</h2>
+        <div class="flex overflow-x-scroll space-x-4 pb-6">
+            <!-- Film 1 -->
+            <div class="flex-shrink-0 w-64 bg-transparent rounded-lg shadow-lg overflow-hidden transform
+                transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                <a href="#" class="block">
+                    <img src="Atlas_ 2_6.jpeg" alt="Film 1" class="w-full h-full object-cover rounded-t-lg">
+                    <div class="p-4" style="background-color: rgba(0, 0, 0, 0.5);">
+                        <h3 class="text-xl font-bold mb-2 text-white">Film 1</h3>
+                        <p class="text-gray-300 mb-4">Aksi, 2024</p>
+                        <p class="text-gray-200">Short description of the film. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Film 2 -->
+            <div class="flex-shrink-0 w-64 bg-transparent rounded-lg shadow-lg overflow-hidden transform
+                transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                <a href="#" class="block">
+                    <img src="Sekawan Limo.jpeg" alt="Film 2" class="w-full h-full object-cover rounded-t-lg">
+                    <div class="p-4" style="background-color: rgba(0, 0, 0, 0.5);">
+                        <h3 class="text-xl font-bold mb-2 text-white">Film 2</h3>
+                        <p class="text-gray-300 mb-4">Komedi, 2024</p>
+                        <p class="text-gray-200">Short description of the film. Lorem ipsum dolor sit amet,
+                            consectetur
+                            adipiscing elit.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Film 3 -->
+            <div class="flex-shrink-0 w-64 bg-transparent rounded-lg shadow-lg overflow-hidden transform
+                transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                <a href="#" class="block">
+                    <img src="drama.jpeg" alt="Film 3" class="w-full h-full object-cover rounded-t-lg">
+                    <div class="p-4" style="background-color: rgba(0, 0, 0, 0.5);">
+                        <h3 class="text-xl font-bold mb-2 text-white">Film 3</h3>
+                        <p class="text-gray-300 mb-4">Drama, 2024</p>
+                        <p class="text-gray-200">Short description of the film. Lorem ipsum dolor sit amet,
+                            consectetur
+                            adipiscing elit.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Film 4 -->
+            <div class="flex-shrink-0 w-64 bg-transparent rounded-lg shadow-lg overflow-hidden transform
+                transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                <a href="#" class="block">
+                    <img src="romantis.jpeg" alt="Film 4" class="w-full h-full object-cover rounded-t-lg">
+                    <div class="p-4" style="background-color: rgba(0, 0, 0, 0.5);">
+                        <h3 class="text-xl font-bold mb-2 text-white">Film 4</h3>
+                        <p class="text-gray-300 mb-4">Romantis, 2024</p>
+                        <p class="text-gray-200">Short description of the film. Lorem ipsum dolor sit amet,
+                            consectetur
+                            adipiscing elit.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Film 5 -->
+            <div class="flex-shrink-0 w-64 bg-transparent rounded-lg shadow-lg overflow-hidden transform
+                transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                <a href="#" class="block">
+                    <img src="horor.jpeg" alt="Film 5" class="w-full h-full object-cover rounded-t-lg">
+                    <div class="p-4" style="background-color: rgba(0, 0, 0, 0.5);">
+                        <h3 class="text-xl font-bold mb-2 text-white">Film 5</h3>
+                        <p class="text-gray-300 mb-4">Horor, 2024</p>
+                        <p class="text-gray-200">Short description of the film. Lorem ipsum dolor sit amet,
+                            consectetur
+                            adipiscing elit.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Film 6 -->
+            <div class="flex-shrink-0 w-64 bg-transparent rounded-lg shadow-lg overflow-hidden transform
+                transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                <a href="#" class="block">
+                    <img src="sci-fi.jpeg" alt="Film 6" class="w-full h-full object-cover rounded-t-lg">
+                    <div class="p-4" style="background-color: rgba(0, 0, 0, 0.5);">
+                        <h3 class="text-xl font-bold mb-2 text-white">Film 6</h3>
+                        <p class="text-gray-300 mb-4">Sci-Fi, 2024</p>
+                        <p class="text-gray-200">Short description of the film. Lorem ipsum dolor sit amet,
+                            consectetur
+                            adipiscing elit.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Film 7 -->
+            <div class="flex-shrink-0 w-64 bg-transparent rounded-lg shadow-lg overflow-hidden transform
+                transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                <a href="#" class="block">
+                    <img src="thiller.jpeg" alt="Film 7" class="w-full h-full object-cover rounded-t-lg">
+                    <div class="p-4" style="background-color: rgba(0, 0, 0, 0.5);">
+                        <h3 class="text-xl font-bold mb-2 text-white">Film 7</h3>
+                        <p class="text-gray-300 mb-4">Thriller, 2024</p>
+                        <p class="text-gray-200">Short description of the film. Lorem ipsum dolor sit amet,
+                            consectetur
+                            adipiscing elit.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Film 8 -->
+            <div class="flex-shrink-0 w-64 bg-transparent rounded-lg shadow-lg overflow-hidden transform
+                transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                <a href="#" class="block">
+                    <img src="petualangan.jpeg" alt="Film 8" class="w-full h-full object-cover rounded-t-lg">
+                    <div class="p-4" style="background-color: rgba(0, 0, 0, 0.5);">
+                        <h3 class="text-xl font-bold mb-2 text-white">Film 8</h3>
+                        <p class="text-gray-300 mb-4">Petualangan, 2024</p>
+                        <p class="text-gray-200">Short description of the film. Lorem ipsum dolor sit amet,
+                            consectetur
+                            adipiscing elit.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Add more film cards as needed -->
+        </div>
+    </section>
+
+
+
+    <!-- Blog Section -->
+    <section id="Artikel Terbaru" class="container mx-auto py-12">
+        <section class="bg-transparent py-12">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-8 text-white">Artikel Terbaru</h2>
+                <div class="flex overflow-x-auto space-x-6 pb-6">
+                    <!-- Artikel 1 -->
+                    <article class="flex-shrink-0 w-64 bg-transparent p-6 rounded-lg shadow-lg border border-gray-700 overflow-hidden transform
+                    transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                        <a href="#">
+                            <h3 class="text-xl font-bold mb-2 text-white">Menjelajahi Dunia Fantasi: Review Film
+                                'Avatar: The Way of Water'</h3>
+                            <p class="text-gray-300">Film ini membawa penonton kembali ke Pandora, dengan visual yang
+                                memukau dan cerita yang menggugah. Dalam ulasan ini, kita akan mengeksplorasi
+                                elemen-elemen penting dari sekuel yang sangat dinantikan ini dan apa yang membuatnya
+                                begitu menarik.</p>
+                        </a>
+                    </article>
+                    <!-- Artikel 2 -->
+                    <article class="flex-shrink-0 w-64 bg-transparent p-6 rounded-lg shadow-lg border border-gray-700 overflow-hidden transform
+                    transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                        <a href="#">
+                            <h3 class="text-xl font-bold mb-2 text-white">Kembali ke Masa Lalu: Klasik Film yang Wajib
+                                Ditonton</h3>
+                            <p class="text-gray-300">Mengungkap keajaiban film-film klasik yang tetap relevan hingga
+                                saat ini. Artikel ini menyajikan beberapa film klasik yang harus Anda tonton dan
+                                bagaimana mereka mempengaruhi industri film modern.</p>
+                        </a>
+                    </article>
+                    <!-- Artikel 3 -->
+                    <article class="flex-shrink-0 w-64 bg-transparent p-6 rounded-lg shadow-lg border border-gray-700 overflow-hidden transform
+                    transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                        <a href="#">
+                            <h3 class="text-xl font-bold mb-2 text-white">Film Indie yang Harus Anda Tonton: Rekomendasi
+                                Terbaru</h3>
+                            <p class="text-gray-300">Dari kisah yang menyentuh hingga inovasi visual, film indie sering
+                                kali menawarkan pengalaman yang unik. Temukan beberapa film indie terbaru yang patut
+                                mendapat perhatian dan mengapa Anda harus menontonnya.</p>
+                        </a>
+                    </article>
+                    <!-- Artikel 4 -->
+                    <article class="flex-shrink-0 w-64 bg-transparent p-6 rounded-lg shadow-lg border border-gray-700 overflow-hidden transform
+                    transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                        <a href="#">
+                            <h3 class="text-xl font-bold mb-2 text-white">Eksplorasi Genre: Apa yang Membuat Film Horor
+                                Begitu Menakutkan?</h3>
+                            <p class="text-gray-300">Film horor memiliki daya tarik tersendiri yang membuat penonton
+                                terus kembali. Artikel ini membahas elemen-elemen kunci dari film horor yang efektif dan
+                                beberapa contoh yang sukses dalam genre ini.</p>
+                        </a>
+                    </article>
+                    <!-- Artikel 5 -->
+                    <article class="flex-shrink-0 w-64 bg-transparent p-6 rounded-lg shadow-lg border border-gray-700 overflow-hidden transform
+                    transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                        <a href="#">
+                            <h3 class="text-xl font-bold mb-2 text-white">Mengapa Film Animasi Selalu Menjadi Favorit
+                                Keluarga?</h3>
+                            <p class="text-gray-300">Film animasi sering kali menjadi pilihan utama untuk ditonton
+                                bersama keluarga. Artikel ini mengeksplorasi apa yang membuat film animasi begitu
+                                istimewa dan mengapa mereka sering kali memiliki daya tarik lintas generasi.</p>
+                        </a>
+                    </article>
+                    <!-- Artikel 6 -->
+                    <article class="flex-shrink-0 w-64 bg-transparent p-6 rounded-lg shadow-lg border border-gray-700 overflow-hidden transform
+                    transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                        <a href="#">
+                            <h3 class="text-xl font-bold mb-2 text-white">Direktur Legendaris: Memahami Gaya dan Warisan
+                                Alfred Hitchcock</h3>
+                            <p class="text-gray-300">Alfred Hitchcock adalah salah satu sutradara paling berpengaruh
+                                dalam sejarah film. Dalam artikel ini, kita akan membahas gaya uniknya dan warisan yang
+                                ditinggalkannya dalam industri film.</p>
+                        </a>
+                    </article>
+                    <!-- Artikel 7 -->
+                    <article class="flex-shrink-0 w-64 bg-transparent p-6 rounded-lg shadow-lg border border-gray-700 overflow-hidden transform
+                    transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                        <a href="#">
+                            <h3 class="text-xl font-bold mb-2 text-white">Tren Terbaru dalam Sinematografi: Teknologi
+                                dan Teknik Terkini</h3>
+                            <p class="text-gray-300">Teknologi dan teknik sinematografi terus berkembang. Temukan tren
+                                terbaru yang mengubah cara film dibuat dan bagaimana inovasi ini mempengaruhi pengalaman
+                                menonton.</p>
+                        </a>
+                    </article>
+                    <!-- Artikel 8 -->
+                    <article class="flex-shrink-0 w-64 bg-transparent p-6 rounded-lg shadow-lg border border-gray-700 overflow-hidden transform
+                    transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+                        <a href="#">
+                            <h3 class="text-xl font-bold mb-2 text-white">Film Adaptasi Buku: Apakah Mereka Selalu Lebih
+                                Buruk dari Versi Aslinya?</h3>
+                            <p class="text-gray-300">Banyak film diadaptasi dari buku, namun sering kali mereka
+                                mendapatkan kritikan. Artikel ini membahas alasan di balik hal ini dan menilai beberapa
+                                adaptasi buku yang berhasil dan yang gagal.</p>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2024 FilmRekomendasi. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="#" class="hover:text-blue-400">Privacy Policy</a> |
+                <a href="#" class="hover:text-blue-400">Terms of Service</a> | 
+                <a href="#" class="hover:text-blue-400">versi Radid Aditia</a>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
